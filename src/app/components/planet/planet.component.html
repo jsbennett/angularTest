@@ -1,0 +1,14 @@
+<div class="planet-title">
+  <h2>Planets</h2>
+</div>
+<div class="planet-information">
+  <p>Click on a planet to find out more information!</p>
+</div>
+<div class="planet-list-container">
+  <ul>
+    <li *ngFor="let planet of planets" (click)="onPlanetSelection(planet)">
+      <button (click)="onPlanetSelection(planet)">{{planet.name}}</button>
+    </li>
+
+  </ul>
+</div>

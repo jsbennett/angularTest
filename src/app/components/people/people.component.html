@@ -1,0 +1,14 @@
+<div class="people-title">
+  <h2>People: The people from the Star Wars Universe</h2>
+</div>
+<div class="people-information">
+  <p>Click on a person to find out more information!</p>
+</div>
+<div class="people-list-container">
+  <ul>
+    <li *ngFor="let person of people">
+      <a routerLink="detail/{{person.url}}">{{person.name}}</a>
+    </li>
+
+  </ul>
+</div>
