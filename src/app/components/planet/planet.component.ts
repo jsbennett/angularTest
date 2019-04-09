@@ -19,8 +19,8 @@ export class PlanetComponent implements OnInit {
 
   getPlanets(): void {
     this.planetService.getPlanets().subscribe(planets => {
-      let tempPlanets = [];
-      let planetList = Object.assign(tempPlanets, planets["results"]);
+      let planetList = [];
+      Object.assign(planetList, planets["results"]);
       this.planets = planetList;
     });
   }

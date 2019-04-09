@@ -1,3 +1,6 @@
-<p>
-  species works!
-</p>
+<div *ngIf="allSpecies">
+  <p>Species</p>
+  <div *ngFor="let species of allSpecies">
+    <a>{{species.name}}</a>
+  </div>
+  <app-comparison-chart [barChartData]="barChartData" [barChartLabels]="barChartLabels"></app-comparison-chart>

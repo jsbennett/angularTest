@@ -43,3 +43,12 @@ h1 {
   height: auto;
   display: block;
 }
+
+@media screen and (max-width: 1166px) {
+  .grid-container {
+    display: inline-block;
+    grid-template-columns: auto;
+
+  }
+
+}

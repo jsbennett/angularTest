@@ -8,6 +8,7 @@ import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { StarshipComponent } from './components/starship/starship.component';
 import { PlanetDetailsComponent } from './components/detail-components/planet-details/planet-details.component';
 import { PersonDetailsComponent } from './components/detail-components/person-details/person-details.component';
+import { PlanetFormComponent } from './components/planet-form/planet-form.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: 'Vehicles',
     component: VehicleComponent
+  },
+  {
+    path: 'PlanetForm',
+    component: PlanetFormComponent
   }];
 
 @NgModule({

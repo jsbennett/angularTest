@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Planet Form</h1>
+  <p>Create Ya own planet!!!!!!!!!!!</p>
+  <form #planetForm="ngForm">
+    <div class="form-group">
+      <label for="name">Planet Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="diameter">Diameter</label>
+      <input type="number" class="form-control" id="diameter">
+    </div>
+    <div class="form-group">
+      <label for="locations">Locations</label>
+      <select class="form-control" id="power" required>
+        <option *ngFor="let location of locations" [value]="location">{{location}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>

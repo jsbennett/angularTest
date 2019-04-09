@@ -20,8 +20,8 @@ export class PeopleComponent implements OnInit {
 
   getPeople(): void {
     this.peopleService.getPeople().subscribe(people => {
-      let tempPeople = [];
-      let peopleList = Object.assign(tempPeople, people["results"]);
+      let peopleList = [];
+      Object.assign(peopleList, people["results"]);
       this.people = peopleList;
       if (this.people) {
         for (let person of this.people) {

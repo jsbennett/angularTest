@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,9 +14,14 @@ import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { StarshipComponent } from './components/starship/starship.component';
 
 import { PlanetService } from './services/planet.service';
+import { SpeciesService } from './services/species.service';
+import { PeopleService } from './services/people.service';
 
 import { PlanetDetailsComponent } from './components/detail-components/planet-details/planet-details.component';
 import { PersonDetailsComponent } from './components/detail-components/person-details/person-details.component';
+import { PlanetFormComponent } from './components/planet-form/planet-form.component';
+import { ChartsModule } from 'ng2-charts';
+import { ComparisonChartComponent } from './components/comparison-chart/comparison-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +33,17 @@ import { PersonDetailsComponent } from './components/detail-components/person-de
     VehicleComponent,
     StarshipComponent,
     PlanetDetailsComponent,
-    PersonDetailsComponent
+    PersonDetailsComponent,
+    PlanetFormComponent,
+    ComparisonChartComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, FormsModule, ChartsModule
   ],
-  providers: [PlanetService],
+  providers: [PlanetService, PeopleService, SpeciesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
