@@ -1,3 +1,4 @@
+# This project is just a tester to try out new things using angular. This is not a proper project. 
 # StarWarsTester
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
